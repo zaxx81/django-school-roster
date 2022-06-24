@@ -1,0 +1,20 @@
+{% extends "pages/layout.html" %}
+
+{% block title %}<title>{{school_name}} Staff Details</title>{% endblock title %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'list_staff' %}">Staff Roster</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Member Details</li>
+  </ol>
+</nav>
+<ul class="list-group">
+  <li class="list-group-item"><b>Employee ID:</b> {{staff.employee_id}}</li>
+  <li class="list-group-item"><b>Name:</b> {{staff.name}}</li>
+  <li class="list-group-item"><b>Role:</b> {{staff.role}}</li>
+  <li class="list-group-item"><b>Age:</b> {{staff.age}}</li>
+  <li class="list-group-item"><b>Password:</b> {{staff.password}}</li>
+</ul>
+{% endblock content %}

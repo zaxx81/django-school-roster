@@ -1,0 +1,20 @@
+{% extends "pages/layout.html" %}
+
+{% block title %}<title>{{school_name}} Student Details</title>{% endblock title %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'list_students' %}">Student Roster</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Member Details</li>
+  </ol>
+</nav>
+<ul class="list-group">
+  <li class="list-group-item"><b>School ID:</b> {{student.school_id}}</li>
+  <li class="list-group-item"><b>Name:</b> {{student.name}}</li>
+  <li class="list-group-item"><b>Role:</b> {{student.role}}</li>
+  <li class="list-group-item"><b>Age:</b> {{student.age}}</li>
+  <li class="list-group-item"><b>Password:</b> {{student.password}}</li>
+</ul>
+{% endblock content %}
